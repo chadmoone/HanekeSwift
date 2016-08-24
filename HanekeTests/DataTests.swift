@@ -36,7 +36,7 @@ class StringDataTests: XCTestCase {
     
     func testConvertFromData() {
         let string = self.name
-        let data = string.dataUsingEncoding(NSUTF8StringEncoding)!
+        let data = string!.dataUsingEncoding(NSUTF8StringEncoding)!
         
         let result = String.convertFromData(data)
         
@@ -45,9 +45,9 @@ class StringDataTests: XCTestCase {
     
     func testAsData() {
         let string = self.name
-        let data = string.dataUsingEncoding(NSUTF8StringEncoding)!
+        let data = string!.dataUsingEncoding(NSUTF8StringEncoding)!
         
-        let result = string.asData()
+        let result = string!.asData()
         
         XCTAssertEqual(result, data)
     }
